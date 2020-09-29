@@ -1,21 +1,21 @@
 import React from 'react'
-import { List, ListItem, ListIcon } from "@chakra-ui/core"
+import { List, ListItem, ListIcon, Heading } from "@chakra-ui/core"
 
 const ToDo = (props) => (
     <>
-        <h1>To Do:</h1>
+        <Heading as="h1" size="lg" p={3}>To Do:</Heading>
         <List spacing={3}>
-            <ListItem>
+            <ListItem border="1px" borderRadius="md" borderColor="gray.900" p={2} bg="gray.800">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit
             </ListItem>
-            <ListItem>
+            <ListItem border="1px" borderRadius="md" borderColor="gray.900" p={2} bg="gray.800">
                 Assumenda, quia temporibus eveniet a libero incidunt suscipit
             </ListItem>
-            <ListItem>
+            <ListItem border="1px" borderRadius="md" borderColor="gray.900" p={2} bg="gray.800">
                 Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
             </ListItem>
                 {/* You can also use custom icons from react-icons */}
-            <ListItem>
+            <ListItem border="1px" borderRadius="md" borderColor="gray.900" p={2} bg="gray.800">
                 Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
             </ListItem>
         </List>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { List, ListItem, IconButton, Flex } from "@chakra-ui/core"
 
 import {
     Modal,
@@ -52,4 +53,36 @@ const AddTaskModal = (props) => {
   );
 }
 
+
+const TasksList = props => (
+    <>
+      {props.todo.length !== 0 ? <List minW="15vw" mt={1}>
+        {props.todo.map((val, i) => <ListItem border="1px" borderRadius="md" borderColor="gray.900" p={1} bg="gray.800" my={2}>
+          <Flex justify="space-between">
+              {"handleArchive" in props ?
+                <span>
+                  <IconButton
+                    variantColor="green"
+                    icon="check"
+                    onClick={() => props.handleArchive(val, i)}
+                  />
+                  </span>
+              : null}
+              <span>
+                {val}
+              </span>
+              <span>
+                <IconButton
+                  variantColor="red"
+                  icon="delete"
+                  onClick={() => props.handleDelete(i)}
+                />
+              </span>
+          </Flex>
+        </ListItem>)}
+      </List> : null}
+    </>
+  )
+
 export { AddTaskModal }
+export { TasksList }

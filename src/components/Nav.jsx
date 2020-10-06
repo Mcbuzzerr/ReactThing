@@ -10,7 +10,7 @@ const Nav = () => {
             <Box as="span" p={2}><Link to="/">To Do</Link></Box>
             <Box as="span" p={2}><Link to="/archive">Archive</Link></Box>
         </nav>
-        <span>My ToDo App</span>
+        <span>My To Do App</span>
     </Flex>
     </>)
 }

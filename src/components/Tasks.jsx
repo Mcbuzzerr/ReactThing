@@ -1,5 +1,5 @@
 import React from 'react'
-import { List, ListItem, IconButton, Flex } from "@chakra-ui/core"
+import { List, ListItem, IconButton, Flex, Box } from "@chakra-ui/core"
 
 import {
     Modal,
@@ -68,9 +68,11 @@ const TasksList = props => (
                   />
                   </span>
               : null}
-              <span>
-                {val}
-              </span>
+              <Box my="auto" mx="1">
+                <span>
+                  {val}
+                </span>
+              </Box>
               <span>
                 <IconButton
                   variantColor="red"
